@@ -3,13 +3,13 @@
 {{- $textEditor := promptStringOnce . "textEditor" "Text editor" -}}
 
 [edit]
-	command = {{ $textEditor }}
+	command = {{ $textEditor | quote}}
 
 [git]
 	autoCommit = true
 	autoPush = true
 
 [data]
-	gitEmail = {{ $gitEmail }}
-	gitName = {{ $gitName }}
-	textEditor = {{ $textEditor }}
+	gitEmail = {{ $gitEmail | quote}}
+	gitName = {{ $gitName | quote}}
+	textEditor = {{ $textEditor | quote}}
