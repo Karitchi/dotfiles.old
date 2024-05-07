@@ -3,9 +3,9 @@
 {{- $textEditor := promptStringOnce . "textEditor" "Text editor" -}}
 
 [data]
-	gitEmail = {{ $gitEmail | quote}}
-	gitName = {{ $gitName | quote}}
-	textEditor = {{ $textEditor | quote}}
+	gitEmail = {{ $gitEmail | quote }}
+	gitName = {{ $gitName | quote }}
+	textEditor = {{ $textEditor | quote }}
 
 [edit]
 	command = {{ .textEditor }}
