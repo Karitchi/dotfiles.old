@@ -2,6 +2,9 @@
 {{- $username := promptStringOnce . "username" "Username" -}}
 {{- $textEditor := promptStringOnce . "textEditor" "Text editor" -}}
 
+[edit]
+	command = {{ $textEditor | quote }}
+
 [git]
 	autoCommit = true
 	autoPush = true
