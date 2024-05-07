@@ -8,7 +8,7 @@
 	textEditor = {{ $textEditor | quote }}
 
 [edit]
-	command = {{ .textEditor }}
+	command = {{ $textEditor | quote }}
 
 [git]
 	autoCommit = true
