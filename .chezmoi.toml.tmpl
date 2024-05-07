@@ -1,5 +1,6 @@
 {{- $email := promptStringOnce . "email" "Email address" -}}
 {{- $username := promptStringOnce . "username" "Username" -}}
+{{- $text-editor := promptStringOnce . "text-editor" "Text editor" -}}
 
 [git]
 	autoCommit = true
@@ -8,3 +9,4 @@
 [data]
 	email = {{ $email | quote}}
 	username = {{ $username | quote }}
+	text-editor = {{ $text-editor | quote }}
