@@ -1,5 +1,5 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-{{- $username := promptStringOnce . "username" "Username" -}}
+{{- $gitEmail := promptStringOnce . "gitEmail" "Git email address" -}}
+{{- $gitname := promptStringOnce . "gitname" "git name" -}}
 {{- $textEditor := promptStringOnce . "textEditor" "Text editor" -}}
 
 [edit]
@@ -10,6 +10,6 @@
 	autoPush = true
 
 [data]
-	email = {{ $email | quote}}
-	username = {{ $username | quote }}
+	gitEmail = {{ $gitEmail | quote}}
+	gitname = {{ $gitname | quote }}
 	textEditor = {{ $textEditor | quote }}
