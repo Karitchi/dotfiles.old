@@ -1,9 +1,7 @@
-{{- $choices := list "desktop" "laptop" "server" "termux" -}}
-{{- $textEditor := promptChoiceOnce . "textEditor" "What type of host are you on" $choices -}}
-
+{{- $textEditorList := list "nano" "micro" "nvim" "code" -}}
+{{- $textEditor := promptChoiceOnce . "textEditor" "Chose you default text editor: " $textEditorList -}}
 [data]
   textEditor = {{- $textEditor | quote -}}
-  
 [git]
 	autoCommit = true
 	autoPush = true
