@@ -1,8 +1,8 @@
 {{- $choices := list "desktop" "laptop" "server" "termux" -}}
 {{- $textEditor := promptChoiceOnce . "textEditor" "What type of host are you on" $choices -}}
 [data]
-    haha = {{- $textEditor | quote -}}
+        textEditor = {{- $textEditor | quote -}}
 [git]
-	autoCommit = true
-	autoPush = true
+	      autoCommit = true
+	      autoPush = true
 
