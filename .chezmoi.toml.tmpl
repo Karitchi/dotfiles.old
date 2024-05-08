@@ -1,3 +1,9 @@
+{{- $textEditorList := list "desktop" "laptop" "server" "termux" -}}
+{{- $textEditor := promptChoiceOnce . "textEditor" "What type of host are you on" $textEditorList -}}
+
+[data]
+	textEditor = $textEditor
+
 [git]
 	autoCommit = true
 	autoPush = true
