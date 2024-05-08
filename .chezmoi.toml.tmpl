@@ -1,9 +1,3 @@
-{{- $textEditorsList := list "nano" "micro" "nvim" "code" -}}
-{{- $textEditor := promptChoice . "textEditor" "Chose your text editor:" $textEditorsList -}}
-
-[data]
-	textEditor = {{ $textEditor | quote }}
-
 [git]
 	autoCommit = true
 	autoPush = true
