@@ -1,14 +1,8 @@
-{{- $gitEmail := promptStringOnce . "gitEmail" "Git email address" -}}
-{{- $gitName := promptStringOnce . "gitName" "Git name" -}}
-{{- $textEditor := promptStringOnce . "textEditor" "Text editor" -}}
+{{- $textEditorsList := list "nano" "micro" "vi" "vim" "code" -}}
+{{- $textEditor := promptChoiceOnce . "textEditor" "Chose your text editor:" $textEditorsList -}}
 
 [data]
-	gitEmail = {{ $gitEmail | quote }}
-	gitName = {{ $gitName | quote }}
-	textEditor = {{ $textEditor | quote }}
-
-[edit]
-	command = {{ $textEditor | quote }}
+	gitTextEditor = {{ $textEditor | quote }}
 
 [git]
 	autoCommit = true
