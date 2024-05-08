@@ -2,7 +2,7 @@
 {{- $textEditor := promptChoiceOnce . "textEditor" "What type of host are you on" $textEditorList -}}
 
 [data]
-	textEditor = $textEditor
+	textEditor = {{- $textEditor -}}
 
 [git]
 	autoCommit = true
