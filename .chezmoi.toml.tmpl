@@ -1,4 +1,4 @@
-{{- $textEditorList := list "desktop" "laptop" "server" "termux" -}}
+{{- $textEditorList := list "nano" "micro" "nvim" "code" -}}
 {{- $textEditor := promptChoiceOnce . "textEditor" "What type of host are you on" $textEditorList -}}
 
 [data]
