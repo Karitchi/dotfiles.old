@@ -1,8 +1,8 @@
-{{- $textEditorsList := list "nano" "micro" "vi" "vim" "code" -}}
+{{- $textEditorsList := list "nano" "micro" "nvim" "code" -}}
 {{- $textEditor := promptChoice . "textEditor" "Chose your text editor:" $textEditorsList -}}
 
 [data]
-	gitTextEditor = {{ $textEditor | quote }}
+	textEditor = {{ $textEditor | quote }}
 
 [git]
 	autoCommit = true
