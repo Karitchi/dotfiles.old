@@ -1,5 +1,5 @@
 {{- $textEditorsList := list "nano" "micro" "vi" "vim" "code" -}}
-{{- $textEditor := promptChoiceOnce . "textEditor" "Chose your text editor:" $textEditorsList -}}
+{{- $textEditor := promptChoice . "textEditor" "Chose your text editor:" $textEditorsList -}}
 
 [data]
 	gitTextEditor = {{ $textEditor | quote }}
