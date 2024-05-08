@@ -1,9 +1,7 @@
 {{- $textEditorList := list "nano" "micro" "nvim" "code" -}}
 {{- $textEditor := promptChoiceOnce . "textEditor" "What type of host are you on" $textEditorList -}}
-
 [data]
 	textEditor = {{- $textEditor | quote -}}
-
 [git]
 	autoCommit = true
 	autoPush = true
